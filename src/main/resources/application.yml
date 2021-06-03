@@ -1,0 +1,14 @@
+spring:
+  quartz:
+    auto-startup: true
+    job-store-type: memory
+    startup-delay: 10
+    wait-for-jobs-to-complete-on-shutdown: true
+    overwrite-existing-jobs: false
+    properties:
+      org:
+        quartz:
+          threadPool:
+            threadCount: 25 # 线程池大小。默认为 10 。
+            threadPriority: 5 # 线程优先级
+            class: org.quartz.simpl.SimpleThreadPool # 线程池类型
